@@ -33,3 +33,4 @@ while True:
     os.remove(image_path)
 
     time.sleep(60)  # Send one image every minute
+

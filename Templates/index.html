@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Parking Dashboard</title>
+    <meta http-equiv="refresh" content="5">  <!-- Auto-refresh every 60 seconds -->
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .info-box {
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        .status-grid {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .status-card {
+            width: 45%;
+            padding: 20px;
+            border-radius: 8px;
+            color: white;
+            font-size: 1.5em;
+        }
+
+        .available {
+            background: #28a745;
+        }
+
+        .occupied {
+            background: #dc3545;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🚗 Smart Parking Dashboard</h1>
+
+        <div class="info-box">
+            <h2>Latest Parking_A Update</h2>
+            <p><strong>Timestamp:</strong> {{ latest_timestamp }}</p>
+        </div>
+
+        <div class="status-grid">
+            <div class="status-card available">
+                <h3>Available Spaces (Parking Data)</h3>
+                <p>{{ available_spaces_parking }}</p>
+            </div>
+            <div class="status-card occupied">
+                <h3>Available Spaces (Image Stats)</h3>
+                <p>{{ available_spaces_image }}</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>Last updated: <span id="last-updated">{{ latest_timestamp }}</span></p>
+        </footer>
+    </div>
+
+</body>
+</html>
